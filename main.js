@@ -201,8 +201,8 @@ function updateChart(ddSelection) {
       },
       color: ["#800303"],
       x: 880,
-      y: 115,
-      dy: -60,
+      y: 118,
+      dy: -50,
       dx: -40,
     }
     ]
