@@ -84,7 +84,8 @@ function updateChart(ddSelection) {
        .style("fill", function(d) { return ramp(d.properties.value) });
     
 
-     // Tooltip start 
+     // Tooltip 
+
      var tooltip = d3.select("div.tooltip");
      svg.selectAll("path")
      .data(json.features)
@@ -305,14 +306,20 @@ function updateChart(ddSelection) {
    });
  });
 };
+
+
 // Generate initial chart
+
 updateChart(ddSelection);
 
-// Handle on click event
+// Handle new dropdown selection
+
 d3.select('#UsageType')
   .on('change', function() {
    d3.selectAll("svg > *").remove();
    ddSelection = d3.select(this).property('value');
    updateChart(ddSelection);
   });
+
+
     
