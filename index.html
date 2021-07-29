@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>USDA ERS Land Usage Data</title>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+<style type="text/css">
+
+/* On mouse hover, lighten state color */
+path:hover {
+	fill-opacity: .7;
+}
+
+/* Style for Custom Tooltip */
+div.tooltip {   
+ 	position: absolute;           
+	text-align: center;                          
+	padding: 3px;           
+	font: 12px sans-serif;        
+	background: rgb(224, 222, 222);   
+	border: 0px;      
+	border-radius: 8px;           
+	pointer-events: none;         
+}
+
+/* Legend Font Style */
+body {
+	font: 11px sans-serif;
+	background-color: #ffffff;
+}
+        
+/* Legend Position Style */
+.legend {
+	position:absolute;
+	left:50px;
+	top:190px;
+}
+
+.axis text {
+	font: 10px sans-serif;
+}
+
+.axis line, .axis path {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+
+</style>
+</head>
+<body>
+<h1>Major Non-Urban Land Use in US</h1>
+<h3>For over 60 years, US Department of Agriculture Economic Research Service (USDA ERS) has been reporting major land use estimates for US land area that covers nearly 2.3 billion acres</h3>
+<h3>Map below can be used to see % land use in each state for different non-urban land use categories (Cropland, Grassland, Forest, Special Use and Other) from the <a href="https://www.ers.usda.gov/data-products/major-land-uses/" target="_blank">USDA ERS Major Land Uses (MLU)</a> report</h3>
+<h3>Category can be selected from the dropdown and hovering over the map gives the state information</h3>
+<br>
+<select id="UsageType" >
+    <option value="Cropland" selected>Cropland area in %</option>
+    <option value="Grassland">Grassland area in %</option>
+    <option value="Forest">Forest area in %</option>
+	<option value="SpecialUse">Special Use area in %</option>
+	<option value="Other">Other area in %</option>
+</select>
+<br>
+<br>
+<script src="main.js"></script>
+</body>
+</html>
+    
