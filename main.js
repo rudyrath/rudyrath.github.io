@@ -8,8 +8,22 @@ var ddSelection = document.getElementById("UsageType").value;
  var width = 1100;
  var height = 550;
  
- var lowColor = '#d9fab9'
- var highColor = '#1b3602'
+ //Color Schemes
+
+ var CroplandlowColor = '#d9fab9'
+ var CroplandhighColor = '#1b3602'
+
+ var GrasslandlowColor = '#f0f7ba'
+ var GrasslandhighColor = '#4e5902'
+
+ var ForestlowColor = '#e9f5ed'
+ var ForesthighColor = '#012b0f'
+
+ var SpecialUselowColor = '#f7f8fc'
+ var SpecialUsehighColor = '#021e96'
+
+ var OtherlowColor = '#f0e3a8'
+ var OtherhighColor = '#403401'
  
  // D3 Projection
  var projection = d3.geoAlbersUsa()
@@ -35,7 +49,30 @@ var div = d3.select("body")
  // Function to draw chart
 
 function updateChart(ddSelection) {
- var csvFile = ddSelection + ".csv";
+ 
+  var csvFile = ddSelection + ".csv";
+
+ if (ddSelection == "Cropland") {
+  var lowColor = CroplandlowColor
+  var highColor = CroplandhighColor
+  }
+ if (ddSelection == "Grassland") {
+    var lowColor = GrasslandlowColor
+    var highColor = GrasslandhighColor
+    }
+ if (ddSelection == "Forest") {
+      var lowColor = ForestlowColor
+      var highColor = ForesthighColor
+      }
+ if (ddSelection == "SpecialUse") {
+        var lowColor = SpecialUselowColor
+        var highColor = SpecialUsehighColor
+        }    
+if (ddSelection == "Other") {
+          var lowColor = OtherlowColor
+          var highColor = OtherhighColor
+          }             
+
 
  d3.csv(csvFile, function(data) {
    var dataArray = [];
