@@ -22,8 +22,8 @@ var ddSelection = document.getElementById("UsageType").value;
  var SpecialUselowColor = '#f7f8fc'
  var SpecialUsehighColor = '#021e96'
 
- var OtherlowColor = '#f0e3a8'
- var OtherhighColor = '#403401'
+ var OtherlowColor = '#e4ddf0'
+ var OtherhighColor = '#2c0273'
  
  // D3 Projection
  var projection = d3.geoAlbersUsa()
