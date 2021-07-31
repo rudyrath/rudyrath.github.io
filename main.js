@@ -10,11 +10,11 @@ var ddSelection = document.getElementById("UsageType").value;
  
  //Color Schemes
 
- var CroplandlowColor = '#d9fab9'
- var CroplandhighColor = '#1b3602'
+ var CroplandlowColor = '#f0f7ba'
+ var CroplandhighColor = '#4e5902'
 
- var GrasslandlowColor = '#f0f7ba'
- var GrasslandhighColor = '#4e5902'
+ var GrasslandlowColor = '#d9fab9'
+ var GrasslandhighColor = '#1b3602'
 
  var ForestlowColor = '#e9f5ed'
  var ForesthighColor = '#012b0f'
