@@ -1,2 +1,2 @@
 # rudyrath.github.io
-USDA ERS MLU Report Chloropleth Map
+USDA ERS MLU Report Choropleth Map
